@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="registration-cssave">
+        <form method="post">
+            <h2 class="text-center">Реєстрація</h2>
+            <form method="post">
+                    {{ form.hidden_tag() }}
+                <div class="form-group">
+                        {{ form.names }}
+                </div>
+                <div class="form-group">
+                    {{ form.logins }}
+                </div>
+                <div class="form-group">
+                    {{ form.passwords }}
+                </div>
+                <div class="form-group">
+                    {{ form.submit }}
+                </div>
+            </form>
+    </div>
+    <script src="{{ url_for('static', filename='JS/usersadmin.js') }}"></script>
+</body>
+</html>

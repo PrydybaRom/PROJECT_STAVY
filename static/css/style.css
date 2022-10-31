@@ -1,0 +1,117 @@
+/* Задній Фон */
+body{
+    background: url(/static/img/back.png);
+    background-color: #759d5a;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+/* Кнопки Увійти і Зареєструватися */
+.buttons{
+    text-align: right;
+    margin: 10px;
+}
+.floating-button {
+    text-decoration: none;
+    display: inline-block;
+    width: 180px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 45px;
+    margin: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: #524f4e;
+    background: white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+    transition: .3s;
+  }
+  .floating-button:hover {
+    background: #d1ec6d;
+    box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+    color: rgb(0, 0, 0);
+    transform: translateY(-7px);
+  }
+
+
+/* Вікно входу */
+.registration-cssave{
+    display: flex;
+    justify-content:center;
+    margin-top: 100px;
+    padding:10px 0;
+    
+  }
+
+  .registration-cssave form {
+    text-align: center;
+    max-width:500px;
+    padding:40px 50px;
+    border-radius:20px;
+    box-shadow:4px 4px 15px rgba(0, 0, 0, 0.2);
+    background-color:rgb(255, 255, 255);
+  }
+  
+  .registration-cssave form h2 {
+    font-weight:bold;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 30px;
+    margin-bottom:30px;
+  }
+  
+  .registration-cssave .item {
+    border-radius:10px;
+    margin-bottom:25px;
+    padding:10px 10px;
+  }
+  
+  .registration-cssave .create-account {
+    border-radius:30px;
+    padding:10px 20px;
+    font-size:18px;
+    font-weight:bold;
+    background-color:#cff592;
+    border:none;
+    color:rgb(0, 0, 0);
+    margin-top:0px;
+  }
+  
+  @media (max-width: 576px) {
+    .registration-cssave form {
+      padding:50px 20px;
+    }
+  }
+
+#names {
+    width: 240px;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+#logins {
+  width: 240px;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 16px;
+}
+#passwords {
+  width: 240px;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 16px;
+}
+#submit{
+  width: 200px;
+  font-size: 24px;
+  border-radius: 20px;
+  margin: 20px;
+}

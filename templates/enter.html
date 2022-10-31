@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Авторизація
+{% endblock %}
+
+{% block body %}
+<div class="registration-cssave">
+    <form method="post">
+        <h2 class="text-center">Вхід</h2>
+            {{ form.hidden_tag() }}
+        <div class="form-group">
+            {{ form.logins }}
+        </div>
+        <div class="form-group">
+            {{ form.passwords }}
+        </div>
+        <div class="form-group">
+            {{ form.submit }}
+        </div>
+    </form>
+</div>
+
+{% endblock %}

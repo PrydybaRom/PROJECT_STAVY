@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/list.css">
+    <title>List</title>
+</head>
+<body>
+    {% for lis in li %}
+    <div class="content">
+            <div id="top"> 
+                <div id="img">
+                    <img src="{{ lis.img }}" alt="" width="360" height="320" style="border-radius: 20px;">
+                    <div id="down">
+                        <p>Вегетаріянське - {{ lis.vgtr }}</p>
+                        <p>Без цукру - {{ lis.nosgr }}</p>
+                        <p>Без лактози - {{ lis.nolkt }}</p>
+                    </div> 
+                </div>
+                <div id="infa">
+                    <h2 class="hd4">{{ lis.title }}</h2>
+                    <p id="call">Калорійність - {{ lis.callor }}</p>
+                    <h3 id="ing">Інгредієнти:</h3>
+                    <h3>{{ lis.ingrid }}</h3>
+                    <h3 class="recept">Рецепт</h3>
+                    <p id="recept">{{ lis.recept }}</p>
+                </div>
+                <div class="buttons">
+                    <a href="/list/{{ lis.id }}/deli">X</a>
+                </div>       
+            </div>
+        </div>
+    {% endfor %}      
+</body>
+</html>

@@ -1,0 +1,118 @@
+{% extends 'basetwo.html' %}
+
+{% block title %}
+Користувач
+{% endblock %}
+
+{% block body %}
+<div class="header">
+    <header>
+<nav>    
+<div class="ash_users">
+    <div class="main">
+        <a href="" id="calculator">Калькулятор</a>
+    </div>
+    <div>
+        <a href="#snidanok">Сніданок</a>
+        <a href="#obid">Обід</a>
+        <a href="#vechera">Вечеря</a>
+        <a href="#perekys">Перекус</a>
+    </div>
+    <a href="/list" id="adds">Обрані страви</a>
+</div>
+
+<div class="params">
+    <form method="post">
+        <ul>
+        <h2>Введіть свої <br> параметри</h2>
+        <br>
+        <p class="param">Введіть стать</p>
+        <li><input type="radio" class="stat" name="state" id="woman" checked value="w">Жінка</li>
+        <li><input type="radio" class="stat" name="state" id="man" value="m">Чоловік</li>
+        <p class="param">Введіть ріст (см)</p>
+        <li><input type="text" name="rist" id="rist"></li>
+        <p class="param">Введіть вагу (кг)</p>
+        <li><input type="text" name="vaga" id="vaga"></li>
+        <br>
+        <br>
+        <button type="submit" class="submit" id="adds">Зберегти</button>
+        </ul> 
+    </form>
+</div>
+
+
+</nav>
+    </header>
+</div>
+
+<main>
+    <h2 class="zag" id="snidanok">Сніданок</h2>
+    <div class="content">
+    {% for brs in br %}    
+        <div class="breakfast">
+            <div class="card-header">
+                <h2 class="hd4">{{ brs.title }}</h2>
+                <img src="{{ brs.img }}" alt="" width="240" height="220" style="border-radius: 20px;">
+                <p>
+                   Калорійність - {{ brs.callor }}ккал 1 порція
+                </p>
+                <a href="/users/{{ brs.id }}/adds" class="addd">Вибрати</a>
+            </div>
+        </div>
+    {% endfor %}    
+    </div>
+
+    <h2 class="zag" id="obid">Обід</h2>
+    <div class="content">
+    {% for lus in lu %}    
+        <div class="breakfast">
+            <div class="card-header">
+                <h2 class="hd4">{{ lus.title }}</h2>
+                <img src="{{ lus.img }}" alt="" width="240" height="220" style="border-radius: 20px;">
+                <p>
+                   Калорійність - {{ lus.callor }}ккал 1 порція
+                </p>
+                <a href="/users/{{ lus.id }}/addl" class="addd">Вибрати</a>
+            </div>
+        </div>
+    {% endfor %}    
+    </div>
+
+    <h2 class="zag" id="vechera">Вечеря</h2>
+    <div class="content">
+    {% for dis in di %}    
+        <div class="breakfast">
+            <div class="card-header">
+                <h2 class="hd4">{{ dis.title }}</h2>
+                <img src="{{ dis.img }}" alt="" width="200" height="180" style="border-radius: 20px;">
+                <p>
+                   Калорійність - {{ dis.callor }}ккал 1 порція
+                </p>
+                <a href="/users/{{ dis.id }}/addd" class="addd">Вибрати</a>
+            </div>
+        </div>
+    {% endfor %}    
+    </div>
+
+    <h2 class="zag" id="perekys">Перекус</h2>
+    <div class="content">
+    {% for sns in sn %}    
+        <div class="breakfast">
+            <div class="card-header">
+                <h2 class="hd4">{{ sns.title }}</h2>
+                <img src="{{ sns.img }}" alt="" width="220" height="200" style="border-radius: 20px;">
+                <p>
+                   Калорійність - {{ sns.callor }}ккал 1 порція
+                </p>
+                <a href="/users/{{ sns.id }}/addss" class="addd">Вибрати</a>
+            </div>
+        </div>
+    {% endfor %}    
+    </div>
+</main>
+
+
+
+
+
+{% endblock %}
